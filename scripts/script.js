@@ -60,7 +60,7 @@ gameGrid.forEach(item => {
 
 let count = 0;
 let previousTarget = null;
-let delay = 1200;
+let delay = 1000;
 
 grid.addEventListener('click', function(e){
     let clicked = e.target;
