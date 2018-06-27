@@ -16,12 +16,8 @@ const cardsArray = [
         'image': '../images/golden-lab.png'
     },
     {
-        'name': 'grandpa-dog',
-        'image': '../images/grandpa-dog.png'
-    },
-    {
         'name': 'husky',
-        'image': '../images/jindo.png'
+        'image': '../images/husky.png'
     },
     {
         'name': 'jack-russell-terrier',
@@ -32,15 +28,87 @@ const cardsArray = [
         'image': '../images/jindo.png'
     },
     {
-        'name': 'pug',
-        'image': '../images/pug.png'
-    },
-    {
-        'name': 'shaggy-dog',
-        'image': '../images/shaggy-dog.png'
-    },
-    {
         'name': 'shiba-inu',
         'image': '../images/shiba-inu.png'
     }
 ]
+
+const game = document.getElementById('game');
+const grid = document.createElement('section');
+grid.setAttribute('class', 'grid');
+game.appendChild(grid);
+
+let gameGrid = cardsArray.concat(cardsArray);
+gameGrid.sort(() => 0.5 - Math.random());
+
+gameGrid.forEach(item => {
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.dataset.name = item.name;
+
+    const front = document.createElement('div');
+    front.classList.add('front');
+
+    const back = document.createElement('div');
+    back.classList.add('back');
+    back.style.backgroundImage = `url(${item.image})`;
+
+    grid.appendChild(card);
+    card.appendChild(front);
+    card.appendChild(back);
+})
+
+let count = 0;
+let previousTarget = null;
+let delay = 1200;
+
+grid.addEventListener('click', function(e){
+    let clicked = e.target;
+    if (clicked.nodeName === 'SECTION' || clicked === previousTarget || clicked.parentNode.classList.contains('selected')) {return;}
+    if (count < 2) {
+        count++;
+        clicked.classList.add('selected');
+        if (count === 1) {
+            firstGuess = clicked.parentNode.dataset.name;
+            console.log(firstGuess);
+            clicked.parentNode.classList.add('selected');
+        } else {
+            secondGuess = clicked.parentNode.dataset.name;
+            console.log(secondGuess);
+            clicked.parentNode.classList.add('selected');
+        }
+        if (firstGuess !== '' && secondGuess !== '') {
+            if (firstGuess === secondGuess) {
+                setTimeout(match, delay);
+                setTimeout(resetGuesses, delay);
+            } else {
+                setTimeout(resetGuesses, delay);
+            }
+        }
+        previousTarget = clicked;
+    }
+});
+
+let firstGuess = '';
+let secondGuess = '';
+
+
+const match = () => {
+    let selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+        card.classList.add('match');
+    });
+}
+
+const resetGuesses = () => {
+    firstGuess = '';
+    secondGuess = '';
+    count = 0;
+
+    let selected = document.querySelectorAll('.selected');
+    selected.forEach(card => {
+        card.classList.remove('selected');
+    });
+}
+
+
