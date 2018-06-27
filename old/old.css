@@ -52,52 +52,51 @@ html {
     box-sizing: inherit;
   }
 
-body {
-    margin: 20px 0;
-    background: whitesmoke;
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: rgb(224, 224, 224);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid {
-    width: 560px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.title {
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
 }
 
-.card {
-    position: relative;
-    transition: all 0.4s linear;
-    transform-style: preserve-3d;
-    margin: 5px;
+.game-intro {
+    text-align: center;
+    padding: 10px;
+    line-height: 20px;
 }
 
-.card, .back, .front {
-    height: 120px;
-    width: 120px;
+.buttons {
+    margin: 20px;
 }
 
-.back, .front {
-    position: absolute;
-    backface-visibility: hidden;
+.button {
+    margin-top: 30px;
+    padding: 10px;
+    border: 1px solid white;
+    cursor: pointer;
 }
 
-.front {
-    background: url(../images/dog-shadow.png) no-repeat center center / contain;
+.button:hover {
+    background-color: white;
+    color: black;
 }
 
-.back {
-    transform: rotateY(180deg);
+.score-board {
+    text-align: center;
+}
+
+.game-board {
+    margin: 30px auto;
+    width: 600px;
+    height: 600px;
     background-color: whitesmoke;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-.selected {
-    transform: rotateY(180deg);
-}
-
-.match .front {
-    background: transparent !important;
 }
