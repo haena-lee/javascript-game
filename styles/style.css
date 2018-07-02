@@ -52,8 +52,25 @@ html {
     box-sizing: inherit;
   }
 
+.game-intro h1 {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 30px;
+    background-color: indianred;
+    color: white;
+}
+
+.game-intro {
+    margin: 0;
+}
+
 body {
-    margin: 20px 0;
+    margin: 0;
     background: white;
 }
 
@@ -70,6 +87,7 @@ body {
     transition: all 0.4s linear;
     transform-style: preserve-3d;
     margin: 5px;
+    cursor: pointer;
 }
 
 .card, .back, .front {
@@ -100,4 +118,7 @@ body {
 
 .match .front {
     background: transparent !important;
+}
+.match {
+    cursor: default;
 }
