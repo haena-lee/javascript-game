@@ -54,7 +54,7 @@ html {
 
 body {
     margin: 20px 0;
-    background: whitesmoke;
+    background: white;
 }
 
 .grid {
@@ -79,16 +79,16 @@ body {
 
 .back, .front {
     position: absolute;
-    backface-visibility: hidden;
+    /* backface-visibility: hidden; */
 }
 
 .front {
-    background: url(../images/dog-shadow.png) no-repeat center center / contain;
+    background: url(../images/dog-shadow.jpg) no-repeat center center / contain;
 }
 
 .back {
     transform: rotateY(180deg);
-    background-color: whitesmoke;
+    background-color: white;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -99,5 +99,5 @@ body {
 }
 
 .match .front {
-    background: blue !important;
+    background: transparent !important;
 }
