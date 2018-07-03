@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Cabin+Sketch:400,700" rel="stylesheet">
     <title>Match a dog</title>
 </head>
 <body>
@@ -15,20 +15,23 @@
             <div class="scoreboard">
                 <p>Number of Guesses: <span id="clickCount">0</span></p>
                 <p>Number of Matches: <span id="matches">0</span></p>
-                <p id="youWin"></p>
-                <!-- <h3 id="youWin"></h3> -->
             </div> <!-- end of scoreboard --> 
+                <p id="youWin"></p>
         </div><!-- end of game intro -->
         <div class="buttons">
             <button onclick="showGame()">Start Game</button>
             <button onclick="resetGame()">Reset Game</button>
         </div><!-- end of buttons -->
         <div id="game"></div>
-        <!-- <input type="button" value="Reset Game" onclick="resetGame()" /> -->
-
-
-
-    </div>
+        <footer>
+            <span id="credits">Credits</span>
+            <div class="credit-content">
+                <p>Graphics from freepik.com<br>
+                   Code inspired and modified from
+                   Educational purposes only.</p>
+            </div> <!-- end of credit-content -->
+        </footer>
+    </div> <!-- end of wrapper -->
 </body>
 
 <script src="scripts/script.js"></script>

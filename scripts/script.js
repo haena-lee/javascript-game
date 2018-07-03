@@ -33,6 +33,20 @@ const cardsArray = [
     }
 ]
 
+const credits = document.getElementById('credits')
+credits.addEventListener('mouseover', mouseOver);
+credits.addEventListener('mouseout', mouseOut);
+function mouseOver() {
+    credits.style.color = 'indianred';
+    const creditContent = document.querySelectorAll('.credit-content');
+    creditContent.classList.add('show');
+}
+function mouseOut() {
+    credits.style.color = 'white';
+}
+
+
+
 function makeGame() {
     const game = document.getElementById('game');
     const grid = document.createElement('section');
@@ -148,6 +162,7 @@ function resetGame() {
     // Create the whole game again
     makeGame();
 }
+
 
 
 
