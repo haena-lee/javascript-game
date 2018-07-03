@@ -52,7 +52,7 @@ html {
     box-sizing: inherit;
   }
 
-.game-intro h1 {
+.game-intro {
     text-transform: uppercase;
     font-family: 'Amatic SC', sans-serif;
     font-weight: 700;
@@ -64,6 +64,7 @@ html {
     background-color: indianred;
     color: white;
 }
+
 
 .game-intro {
     margin: 0;
