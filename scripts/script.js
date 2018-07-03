@@ -63,8 +63,8 @@ function makeGame() {
     let previousTarget = null;
     let delay = 1200;
 
-    var matchCount = 0;
-    var clickCount = 0;
+    let matchCount = 0;
+    let clickCount = 0;
 
     grid.addEventListener('click', function(e){
         let clicked = e.target;
@@ -91,7 +91,7 @@ function makeGame() {
                     document.getElementById("matches").innerHTML = matchCount;
                     console.log(`Number of matches: ${matchCount}`);
                     if (matchCount == (gameGrid.length / 2)) {
-                        document.getElementById("matches").innerHTML = "All the puppies found their moms!";
+                        document.getElementById("youWin").innerHTML = "All the puppies found their moms!";
                     }
                 } else {
                     setTimeout(resetGuesses, delay);
@@ -124,6 +124,16 @@ function makeGame() {
     }
 }
 // Now instantiate the game:
+
+function showGame() {
+    var game = document.getElementById('game');
+    if (game.style.display = 'none') {
+        game.style.display = 'block';
+    } else {
+        game.style.dispaly = 'none';
+    }
+}
+
 makeGame();
 
 function resetGame() {

@@ -12,14 +12,22 @@
     <div id="wrapper">
         <div class="game-intro">
             <h1>Help puppies find their mom by matching the cards</h1>
-            <h3 id="clickCount">0</h3>
-            <h3 id="matches">0</h3>
-            <h3 id="youWin"></h3>
-            <button id="start-button">Start Game</button>
-            <div id="game"></div>
-            <input type="button" value="Reset Game" onclick="resetGame()" />
-
+            <div class="scoreboard">
+                <p>Number of Guesses: <span id="clickCount">0</span></p>
+                <p>Number of Matches: <span id="matches">0</span></p>
+                <p id="youWin"></p>
+                <!-- <h3 id="youWin"></h3> -->
+            </div> <!-- end of scoreboard --> 
         </div><!-- end of game intro -->
+        <div class="buttons">
+            <button onclick="showGame()">Start Game</button>
+            <button onclick="resetGame()">Reset Game</button>
+        </div><!-- end of buttons -->
+        <div id="game"></div>
+        <!-- <input type="button" value="Reset Game" onclick="resetGame()" /> -->
+
+
+
     </div>
 </body>
 
