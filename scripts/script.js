@@ -33,23 +33,12 @@ const cardsArray = [
     }
 ]
 
-// const credits = document.getElementById('credits')
-// credits.addEventListener('mouseover', mouseOver);
-// credits.addEventListener('mouseout', mouseOut);
-// function mouseOver() {
-//     credits.style.color = 'indianred';
-//     const creditContent = document.querySelectorAll('.credit-content');
-//     creditContent.classList.add('show');
-// }
-// function mouseOut() {
-//     credits.style.color = 'white';
-// }
 
 const credits = document.getElementById('credits');
 credits.addEventListener('mouseover', mouseOver);
 credits.addEventListener('mouseout', mouseOut)
 function mouseOver() {
-    credits.style.color = 'indianred';
+    credits.style.color = 'lightblue';
     const $creditContent = $('.credit-content');
     $creditContent.addClass('show');
 }

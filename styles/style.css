@@ -113,7 +113,8 @@ body {
 }
 
 #youWin {
-    color: indianred;
+    color: lightblue;
+    font-size: 30px;
 }
 
 .buttons {
@@ -184,30 +185,37 @@ button:hover {
 
 footer {
     margin: 0 auto 50px auto;
-    text-align: center;
-    position: relative;
     color: white;
     font-family: 'Gaegu', sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     padding: 10px;
+    text-align: center;
+}
+
+.credit-container {
+    position: relative;
+    display: inline-block;
+    width: 100px;
 }
 
 .credit-content {
     font-family: 'Gaegu', sans-serif;
     text-transform: uppercase;
     font-size: 16px;
+    font-weight: 700;
     color: white;
     display: none;
 }
 
 .credit-content.show {
-    background-color: white;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
     padding: 12px;
     border-radius: 30px;
-    color: dimgrey;
+    color: rgb(31, 83, 100);
     display: block;
     position: absolute;
-    left: 250px;
-    bottom: 0px;
+    left: 100px;
+    bottom: -15px;
 }
