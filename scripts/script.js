@@ -98,15 +98,17 @@ function makeGame() {
             }
             if (firstGuess !== '' && secondGuess !== '') {
                 clickCount++;
-                document.getElementById("clickCount").innerHTML = clickCount;
+                document.getElementById('clickCount').innerHTML = clickCount;
                 if (firstGuess === secondGuess) {
                     setTimeout(match, delay);
                     setTimeout(resetGuesses, delay);
                     matchCount++;
-                    document.getElementById("matches").innerHTML = matchCount;
+                    document.getElementById('matches').innerHTML = matchCount;
                     console.log(`Number of matches: ${matchCount}`);
                     if (matchCount == (gameGrid.length / 2)) {
-                        document.getElementById("youWin").innerHTML = "All the puppies found their moms!";
+                        document.getElementById('youWin').innerHTML = "All the puppies found their moms!";
+                        const $gameIntro = $('.game-intro');
+                        $gameIntro.addClass('win');
                     }
                 } else {
                     setTimeout(resetGuesses, delay);

@@ -61,6 +61,20 @@ html {
     margin-bottom: 20px;
     background-color: rgb(46, 46, 46);
     color: white;
+    background-image: url('../images/sad-dog.png');
+    background-repeat: no-repeat;
+    background-position: 50px 100px;
+}
+
+.game-intro.win {
+    text-transform: uppercase;
+    font-family: 'Gaegu', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(46, 46, 46);
+    color: white;
     background-image: url('../images/dog-wagging.png');
     background-repeat: no-repeat;
     background-position: 50px 100px;
@@ -138,7 +152,7 @@ button {
 
 button:hover {
     background-color: white;
-    color: black;
+    color: rgb(46, 46, 46);
 }
 
 .card {
