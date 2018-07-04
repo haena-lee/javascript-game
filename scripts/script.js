@@ -33,19 +33,31 @@ const cardsArray = [
     }
 ]
 
-const credits = document.getElementById('credits')
+// const credits = document.getElementById('credits')
+// credits.addEventListener('mouseover', mouseOver);
+// credits.addEventListener('mouseout', mouseOut);
+// function mouseOver() {
+//     credits.style.color = 'indianred';
+//     const creditContent = document.querySelectorAll('.credit-content');
+//     creditContent.classList.add('show');
+// }
+// function mouseOut() {
+//     credits.style.color = 'white';
+// }
+
+const credits = document.getElementById('credits');
 credits.addEventListener('mouseover', mouseOver);
-credits.addEventListener('mouseout', mouseOut);
+credits.addEventListener('mouseout', mouseOut)
 function mouseOver() {
     credits.style.color = 'indianred';
-    const creditContent = document.querySelectorAll('.credit-content');
-    creditContent.classList.add('show');
+    const $creditContent = $('.credit-content');
+    $creditContent.addClass('show');
 }
 function mouseOut() {
     credits.style.color = 'white';
+    const $creditContent = $('.credit-content');
+    $creditContent.removeClass('show');
 }
-
-
 
 function makeGame() {
     const game = document.getElementById('game');
